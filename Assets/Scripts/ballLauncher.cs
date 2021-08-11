@@ -59,7 +59,7 @@ public class ballLauncher : MonoBehaviour
         
         mouseRealeasePos = Input.mousePosition;
         ballVel = (mousePressDownPos - mouseRealeasePos);
-        ballVel = new Vector3(0, ballVel.y * .02f, 0);
+        ballVel = new Vector3(0, ballVel.y * .008f, 0);
         Shoot((mousePressDownPos - mouseRealeasePos).magnitude);
         
     }

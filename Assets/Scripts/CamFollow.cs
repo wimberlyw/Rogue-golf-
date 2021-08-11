@@ -11,9 +11,11 @@ public class CamFollow : MonoBehaviour
 
     //public CameraRotation CameraRotation{ get{ return cameraRotation;} }
    
-    private GameObject followTarget;
+    public GameObject followTarget;
     private Vector3 offset;
     private Vector3 changePos;
+    private Vector3 changeRot, originalRot;
+
 
     private void Awake()
     {
@@ -25,6 +27,9 @@ public class CamFollow : MonoBehaviour
         followTarget= target;                                               //set target
         offset = followTarget.transform.position - transform.position;      //set offset
         changePos = transform.position;                                     //set changePos
+        originalRot = Vector3.zero;
+        changeRot = new Vector3(45,0,0);
+
     }
 
     private void LateUpdate()
@@ -32,19 +37,27 @@ public class CamFollow : MonoBehaviour
         
         if(followTarget)                                                    //if target is present
         {
+            Debug.Log(followTarget);
             if(activeVectors.x)                                             //if x axis is allowed
             {  
                 changePos.x = followTarget.transform.position.x-offset.x;   //set the change pos x
+
             }
             if(activeVectors.y)
             {  
                 changePos.y = followTarget.transform.position.y-offset.y;
+                
+                if (followTarget.transform.position.y > 4)
+                {
+                    this.transform.Rotate(changeRot);
+                }
             }
             if(activeVectors.z)
             {  
                 changePos.z = followTarget.transform.position.z-offset.z;
             }
             transform.position = changePos;
+            
         }
     }
 

@@ -707,6 +707,8 @@ MonoBehaviour:
   ball: {fileID: 1538628740}
   rotationSpeed: 5
   BallLauncher: {fileID: 1538628734}
+  currentBallYPos: 0
+  newBallYPos: 0
 --- !u!114 &1415814169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +716,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415814166}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eadebc102a7343408b3ba103edd7abd, type: 3}
   m_Name: 
@@ -723,6 +725,7 @@ MonoBehaviour:
     x: 1
     y: 1
     z: 1
+  followTarget: {fileID: 0}
 --- !u!114 &1538628734 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8896552724200573167, guid: 41b9e367cff6ccc40a27f76e3cd0ab56, type: 3}
