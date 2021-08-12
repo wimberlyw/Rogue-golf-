@@ -10,6 +10,7 @@ public class ballLauncher : MonoBehaviour
     private Vector3 mousePressDownPos, mouseRealeasePos, currentMousePos, lineStartPos, lineEndPos, ballVel;
     public Rigidbody ballRB;
     public float forceMultiplier = .02f;
+    public float maxForce = 8;
    // ballLine bl;
     private Camera cam;
     //public LineRenderer lr;
@@ -54,9 +55,7 @@ public class ballLauncher : MonoBehaviour
     }
 
     void OnMouseUp()
-    {
-    
-        
+    {    
         mouseRealeasePos = Input.mousePosition;
         ballVel = (mousePressDownPos - mouseRealeasePos);
         ballVel = new Vector3(0, ballVel.y * .008f, 0);
@@ -68,7 +67,15 @@ public class ballLauncher : MonoBehaviour
     {
         if(!isShoot)
             return;
-        ballRB.AddForce((ControlPoint.transform.forward +ballVel)* Force * forceMultiplier, ForceMode.Impulse);
+
+        Vector3 totalForce = (ControlPoint.transform.forward + ballVel) * Force * forceMultiplier;
+        //CLAMP EACH VECTOR DIRECTION FOR POWER
+        totalForce.x = Mathf.Clamp(totalForce.x, -maxForce, maxForce);
+        totalForce.y = Mathf.Clamp(totalForce.y, -maxForce, maxForce);
+        totalForce.z = Mathf.Clamp(totalForce.z, -maxForce, maxForce);
+
+        ballRB.AddForce(totalForce, ForceMode.Impulse);
+        Debug.Log("Force: " + totalForce);
         isShoot = false;
         
 
