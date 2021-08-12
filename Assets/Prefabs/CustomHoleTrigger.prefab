@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8319238118040004471}
   - component: {fileID: 8319238118040004464}
   - component: {fileID: 8319238118040004465}
+  - component: {fileID: 4055044533365577129}
   m_Layer: 7
-  m_Name: HoleTrigger
+  m_Name: CustomHoleTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,3 +97,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4055044533365577129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8319238118040004467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8c0d7c7916ca34eb41a4bddda5f52b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LayerOnEnter: 6
+  LayerOnExit: 0
+  levelManager: {fileID: 0}
