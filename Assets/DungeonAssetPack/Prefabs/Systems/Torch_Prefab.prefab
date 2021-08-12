@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8860175192853448189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.273, y: -0.3657061, z: 3.2819996}
+  m_LocalPosition: {x: -2.273, y: -0.309, z: 3.2721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3289171523463032955}
@@ -76,7 +76,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.647346, b: 0.1745283, a: 1}
+  m_Color: {r: 1, g: 0.7634771, b: 0.4481132, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -86,7 +86,7 @@ Light:
     m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -116,7 +116,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: SizeModule.curve.scalar
-      value: 1.5
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: SizeModule.separateAxes
@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: SizeModule.curve.minScalar
-      value: 0.9
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8454981855541771957, guid: 80ac3f18fd5ec824b8162400aed84853, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
